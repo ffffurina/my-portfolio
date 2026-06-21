@@ -15,7 +15,7 @@ import {
 const CONFIG = {
   // === 链接配置 ===
   // 这里填写你独立的博客站地址 (例如由 Obsidian + Quartz 生成的网站)
-  blogUrl: "https://ffffurina.top/", 
+  blogUrl: "https://ffffurina.github.io/academic-blog/", 
   
   // === 颜色配置 ===
   colors: {
@@ -190,31 +190,6 @@ export default function Portfolio() {
                 {t(DATA.profile.bio)}
               </p>
               
-              {/* Blog Portal Card (关联到博客的地方) */}
-              <div className="mt-6 p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 flex items-center justify-between group hover:border-blue-200 dark:hover:border-blue-800 transition-all">
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                    {lang === 'zh' ? '我的知识库' : 'My Knowledge Base'}
-                    <span className="px-1.5 py-0.5 rounded text-[10px] bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-normal">
-                      Blog
-                    </span>
-                  </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-md">
-                    {lang === 'zh' 
-                      ? '访问我的独立博客，查看我在计算机科学、数学和语言学习方面的完整笔记。' 
-                      : 'Visit my external blog for complete notes on CS, Math, and Language learning.'}
-                  </p>
-                </div>
-                <a 
-                  href={CONFIG.blogUrl} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline"
-                >
-                  {lang === 'zh' ? '访问博客' : 'Visit Site'} <ExternalLink size={12} />
-                </a>
-              </div>
-
               <div className="mt-4 flex flex-wrap gap-2">
                 {DATA.profile.tags.map(tag => (
                   <span key={tag} className="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded text-xs border border-slate-200 dark:border-slate-700">
